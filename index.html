@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TheHodgesPodges: build and upgrade planners for hobbyists</title>
+  <meta name="description" content="TheHodgesPodges is one home for build and upgrade planners across hobbies, starting with RC crawlers.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Big+Shoulders+Display:wght@500;700;900&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap header-row">
+      <a class="brand" href="#top" aria-label="TheHodgesPodges home">
+        <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true">
+          <polygon points="20,2 36,11 36,29 20,38 4,29 4,11" />
+          <circle cx="20" cy="20" r="7.5" />
+        </svg>
+        <span>TheHodgesPodges</span>
+      </a>
+      <nav aria-label="Main">
+        <ul class="nav">
+          <li><a href="#hobbies">Hobbies</a></li>
+          <li><a href="#apps">Apps</a></li>
+          <li><a href="#about">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <h1 class="wordmark">TheHodges<wbr>Podges</h1>
+          <p class="lede">Planners for the things you build and upgrade. Pick the hobby, pick what you own, and see what fits before you spend a dollar.</p>
+          <p class="hero-note">The first planner, for RC crawlers, is being built now. RC boats, electric guitars and model railroads are next on the bench, with more hobbies after them.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#hobbies">Open the parts cabinet</a>
+            <a class="btn btn-quiet" href="#apps">See the first app</a>
+          </div>
+        </div>
+
+        <div class="cabinet-area" id="hobbies">
+          <h2 class="cabinet-title">Hobbies</h2>
+          <p class="cabinet-help" id="cabinet-help">Each drawer is a hobby. Pull one out to see what its planner will do.</p>
+          <div class="cabinet" role="group" aria-labelledby="cabinet-help">
+            <div class="cabinet-plate" aria-hidden="true">THP parts cabinet</div>
+            <ul class="drawers" id="drawers">
+              <!-- Drawers are filled in from js/catalog.js -->
+            </ul>
+          </div>
+          <noscript>
+            <p class="noscript">Turn on JavaScript to open the drawers. The first hobby is RC crawlers, whose planner is being built. Planned next: RC boats, electric guitars, model railroads, slot cars, sewing and embroidery machines, fishing rod building, amateur radio, RC airplanes, DIY audio and hobby robotics.</p>
+          </noscript>
+        </div>
+      </div>
+    </section>
+
+    <section class="drawer-detail-band" aria-label="Selected hobby">
+      <div class="wrap">
+        <div class="drawer-detail" id="drawer-detail" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="apps" id="apps">
+      <div class="wrap apps-grid">
+        <div class="apps-intro">
+          <h2>Apps</h2>
+          <p>Every hobby gets its own planner. They live here, side by side, and they all work the same way.</p>
+        </div>
+
+        <article class="app-card" aria-labelledby="app-rc-title">
+          <div class="app-card-head">
+            <h3 id="app-rc-title">RC Crawler Build Lab</h3>
+            <span class="tag tag-building">Being built</span>
+          </div>
+          <p class="app-summary">Upgrade the exact crawler you already own, or design one from an empty build, and check every part against documented fitment before you order it.</p>
+          <ul class="app-features">
+            <li>Start from your real truck, down to the kit number</li>
+            <li>Fitment checks backed by manufacturer documents</li>
+            <li>Parts without proof are marked <em>Compatibility not verified</em>, never guessed</li>
+            <li>Saved builds, named wishlists and dated prices</li>
+          </ul>
+          <p class="app-status">Not open to the public yet. It will appear here as the first app on the site when it launches.</p>
+        </article>
+
+        <aside class="next-up" aria-labelledby="next-up-title">
+          <h3 id="next-up-title">Next on the bench</h3>
+          <ul id="next-up-list">
+            <li><span>RC boats and performance upgrades</span><span class="tag tag-planned">Planned</span></li>
+            <li><span>Electric guitar customization</span><span class="tag tag-planned">Planned</span></li>
+            <li><span>Model railroading and locomotive upgrades</span><span class="tag tag-planned">Planned</span></li>
+          </ul>
+          <p class="next-up-more"><a href="#hobbies">See every hobby in the cabinet</a></p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="wrap about-grid">
+        <h2>Why a hodgepodge</h2>
+        <div class="about-body">
+          <p>Most hobbies that involve building and upgrading have the same problem: thousands of parts, a handful of forums, and no easy way to know whether the part in your cart actually fits the thing on your bench.</p>
+          <p>TheHodgesPodges is a mixed bag on purpose. One workshop, many hobbies, and the same promise in every planner:</p>
+          <dl class="promises">
+            <div>
+              <dt>Start with what you own</dt>
+              <dd>Plans begin from your exact model, not a generic category.</dd>
+            </div>
+            <div>
+              <dt>Show the proof</dt>
+              <dd>A fit is marked as a fit only when a manufacturer document says so.</dd>
+            </div>
+            <div>
+              <dt>Say when we don't know</dt>
+              <dd>Anything unproven is labelled that way, so you can decide for yourself.</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-row">
+      <p>TheHodgesPodges</p>
+      <p>Built in the workshop, one hobby at a time.</p>
+    </div>
+  </footer>
+
+  <script src="js/catalog.js"></script>
+  <script src="js/cabinet.js"></script>
+</body>
+</html>
