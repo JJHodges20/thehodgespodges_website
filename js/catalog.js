@@ -19,6 +19,11 @@
   set app.url to its address. The drawer, the detail card and the
   "Next on the bench" list all update from this file.
 
+  Only HODGES_CATALOG is shown on the site. HODGES_UPCOMING, further down,
+  holds the other ranked hobbies, taken off the site on 2026-11-17 until
+  the RC crawler app is ready. To show one again, move its entry into
+  HODGES_CATALOG; it appears as a "Planned" drawer and in "Next on the bench".
+
   Affiliate programs are a later business goal. Nothing on the site links
   to a retailer yet; add that only once each hobby's app is built and the
   programs are actually joined.
@@ -37,7 +42,11 @@ window.HODGES_CATALOG = [
       url: "",
       note: "Being built now. It will be the first app on the site."
     }
-  },
+  }
+];
+
+// Not shown on the site (see the note at the top). Kept in ranked order.
+window.HODGES_UPCOMING = [
   {
     id: "rc-boats",
     name: "RC boats and performance upgrades",

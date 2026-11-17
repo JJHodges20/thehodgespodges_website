@@ -28,7 +28,7 @@ Then open <http://127.0.0.1:8590>.
 
 ## Add a hobby
 
-Add an entry to `js/catalog.js`. The cabinet grows a row by itself and always keeps one empty drawer for the next hobby. Hobbies appear in the order of the list (RC crawlers first, then the 2026-11-17 opportunity ranking).
+Only RC crawlers is on the site for now. The other ranked hobbies (2026-11-17 opportunity ranking) are kept in `HODGES_UPCOMING` in `js/catalog.js`, which the site doesn't show. To put one on the site, move its entry into `HODGES_CATALOG`: it appears as a "Planned" drawer and in "Next on the bench", which stays hidden while nothing is planned. The cabinet grows a row by itself and always keeps at least one empty drawer.
 
 ## When the RC Crawler Build Lab launches
 

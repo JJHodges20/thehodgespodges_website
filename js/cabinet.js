@@ -141,6 +141,8 @@
     var list = document.getElementById("next-up-list");
     if (!list) return;
     var planned = catalog.filter(function (h) { return h.status === "planned"; }).slice(0, 4);
+    var aside = list.closest ? list.closest(".next-up") : null;
+    if (aside) aside.hidden = planned.length === 0;
     list.textContent = "";
     planned.forEach(function (hobby) {
       var li = el("li");
