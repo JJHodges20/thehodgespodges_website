@@ -19,6 +19,8 @@ Then open <http://127.0.0.1:8590>.
 | File | What it is |
 | --- | --- |
 | `index.html` | The whole page: hero, parts cabinet of hobbies, apps, about |
+| `privacy.html` | Privacy policy (draft, fill-ins highlighted) |
+| `terms.html` | Terms of service (draft, fill-ins highlighted) |
 | `js/catalog.js` | **The list of hobbies and apps.** Edit this to add a hobby or launch an app |
 | `js/cabinet.js` | Draws a drawer per hobby and the "Next on the bench" list from the catalog |
 | `css/styles.css` | All styling (palette and type at the top) |
@@ -34,6 +36,15 @@ Add an entry to `js/catalog.js`. The cabinet grows a row by itself and always ke
 2. In `index.html`, change the RC Crawler Build Lab card in the Apps section: the tag to `Open now` (class `tag-live`), and replace the "Not open to the public yet" line with a link to the app.
 
 The app itself stays its own project; this site only links to it.
+
+## Privacy policy and terms of service
+
+Both are drafts, not yet in effect, and not legal advice. Before anything goes public:
+
+- Fill in every highlighted `fill-in` item: business name, state, contact email, hosting provider, how long logs and backups are kept, the effective date, the liability cap and the court location.
+- Have a lawyer review both pages.
+- Recheck them against what each app actually collects when it launches, and again before any affiliate links go live.
+- Google Fonts is disclosed in the privacy policy. Hosting the fonts on the site itself would remove that section.
 
 ## Later
 
