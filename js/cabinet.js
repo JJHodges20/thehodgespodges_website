@@ -66,52 +66,27 @@
 
   function renderDetail(hobby) {
     detailEl.textContent = "";
-    detailEl.classList.remove("is-pulled");
     if (!hobby) {
-      detailEl.appendChild(el("p", "bench-note", "Pull out a drawer and its project lands here on the bench."));
+      var hint = el("p", "detail-empty", "Pull out a drawer above to see what that hobby's planner will help with.");
+      detailEl.appendChild(hint);
       return;
     }
-
-    // The pulled-out drawer, seen from above: felt liner, project card, parts tags, drawer front.
-    var tray = el("div", "tray");
-    var liner = el("div", "tray-liner");
-    var card = el("div", "project-card");
 
     var head = el("div", "detail-head");
     head.appendChild(el("h3", "detail-title", hobby.name));
     head.appendChild(el("span", "tag tag-" + hobby.status, STATUS_TEXT[hobby.status] || ""));
-    card.appendChild(head);
-    card.appendChild(el("p", "detail-summary", hobby.summary));
-    liner.appendChild(card);
+    detailEl.appendChild(head);
+
+    detailEl.appendChild(el("p", "detail-summary", hobby.summary));
 
     if (hobby.examples && hobby.examples.length) {
-      var parts = el("div", "parts");
-      var partsId = "parts-" + hobby.id;
-      var partsHeading = el("p", "parts-heading", "What you'll plan");
-      partsHeading.id = partsId;
-      parts.appendChild(partsHeading);
       var list = el("ul", "detail-examples");
-      list.setAttribute("aria-labelledby", partsId);
+      list.setAttribute("aria-label", "What you'll plan");
       hobby.examples.forEach(function (ex) {
         list.appendChild(el("li", null, ex));
       });
-      parts.appendChild(list);
-      liner.appendChild(parts);
+      detailEl.appendChild(list);
     }
-
-    tray.appendChild(liner);
-    var front = el("div", "tray-front");
-    front.setAttribute("aria-hidden", "true");
-    var frontLabel = el("span", "drawer-label");
-    frontLabel.appendChild(el("span", "drawer-label-text", hobby.label));
-    front.appendChild(frontLabel);
-    front.appendChild(el("span", "drawer-pull"));
-    tray.appendChild(front);
-    detailEl.appendChild(tray);
-
-    // Restart the pull-out motion each time a drawer is opened.
-    void detailEl.offsetWidth;
-    detailEl.classList.add("is-pulled");
 
     var foot = el("p", "detail-foot");
     if (hobby.app && hobby.status === "live" && hobby.app.url) {
@@ -123,7 +98,7 @@
     } else {
       foot.textContent = "No planner yet. This one is on the list.";
     }
-    card.appendChild(foot);
+    detailEl.appendChild(foot);
   }
 
   function select(id, updateHash) {
@@ -147,19 +122,18 @@
       if (history.replaceState) history.replaceState(null, "", "#hobbies");
     } else {
       select(id, true);
-      showTrayIfHidden();
+      showDetailIfHidden();
     }
   }
 
-  // When the bench is below the visible screen, bring the pulled-out drawer into view
-  // so the click visibly does something. Focus stays on the drawer button.
-  function showTrayIfHidden() {
-    var tray = detailEl.querySelector(".tray");
-    if (!tray || !tray.scrollIntoView) return;
-    var rect = tray.getBoundingClientRect();
+  // When the details are below the visible screen (phones, short windows), bring them
+  // into view so the click visibly does something. Focus stays on the drawer button.
+  function showDetailIfHidden() {
+    if (!detailEl.scrollIntoView) return;
+    var rect = detailEl.getBoundingClientRect();
     var viewHeight = window.innerHeight || document.documentElement.clientHeight;
     if (rect.top > viewHeight - 120) {
-      tray.scrollIntoView({ block: "start" });
+      detailEl.scrollIntoView({ block: "start" });
     }
   }
 

@@ -8,7 +8,7 @@
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Big+Shoulders+Display:wght@500;700;900&family=Big+Shoulders+Stencil+Display:wght@800&family=Permanent+Marker&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Big+Shoulders+Display:wght@500;700;900&display=swap">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -35,90 +35,25 @@
 
   <main id="main">
     <section class="hero" id="top">
-      <div class="tool-rail" aria-hidden="true">
-        <div class="wrap tool-rail-inner">
-          <span class="hang hang-saw">
-            <svg class="tool" viewBox="0 0 300 120">
-              <defs><mask id="saw-grip"><rect width="300" height="120" fill="#fff"/><rect x="22" y="40" width="38" height="38" rx="14" fill="#000"/></mask></defs>
-              <path class="steel-light" d="M74 22 L294 50 L294 64 L74 100 Z"/>
-              <line class="teeth" x1="76" y1="101" x2="292" y2="65"/>
-              <path class="wood" mask="url(#saw-grip)" d="M8 18 h74 v88 h-74 q-9 -44 0 -88 z"/>
-              <circle class="rivet" cx="72" cy="34" r="3.5"/><circle class="rivet" cx="72" cy="88" r="3.5"/>
-            </svg>
-          </span>
-          <span class="hang hang-hammer">
-            <svg class="tool" viewBox="0 0 70 210">
-              <rect class="wood" x="27" y="26" width="15" height="178" rx="6"/>
-              <path class="steel" d="M4 10 h42 c8 -2 14 -6 20 -10 v12 c-4 6 -10 10 -18 12 h-44 z"/>
-              <rect class="steel-dark" x="22" y="6" width="25" height="22" rx="3"/>
-            </svg>
-          </span>
-          <span class="hang hang-wrench">
-            <svg class="tool" viewBox="0 0 54 220">
-              <defs><mask id="wrench-holes"><rect width="54" height="220" fill="#fff"/><rect x="18" y="0" width="18" height="24" fill="#000"/><circle cx="27" cy="192" r="10" fill="#000"/></mask></defs>
-              <g class="steel" mask="url(#wrench-holes)">
-                <circle cx="27" cy="30" r="24"/>
-                <rect x="18" y="40" width="18" height="140" rx="6"/>
-                <circle cx="27" cy="192" r="21"/>
-              </g>
-            </svg>
-          </span>
-          <span class="hang hang-pliers">
-            <svg class="tool" viewBox="0 0 70 220">
-              <path class="steel" d="M27 6 q-7 32 2 66 h12 q9 -34 2 -66 z"/>
-              <path class="grip" d="M29 84 q-14 60 -19 130 h13 q4 -66 15 -124 z"/>
-              <path class="grip" d="M41 84 q14 60 19 130 h-13 q-4 -66 -15 -124 z"/>
-              <circle class="steel-dark" cx="35" cy="80" r="10"/>
-              <circle class="rivet" cx="35" cy="80" r="3.5"/>
-            </svg>
-          </span>
-          <span class="hang hang-driver">
-            <svg class="tool" viewBox="0 0 40 220">
-              <rect class="grip" x="6" y="6" width="28" height="80" rx="12"/>
-              <rect class="steel-dark" x="13" y="86" width="14" height="10" rx="2"/>
-              <rect class="steel" x="17" y="96" width="6" height="104"/>
-              <path class="steel" d="M17 200 h6 l-1 14 h-4 z"/>
-            </svg>
-          </span>
-          <span class="hang hang-square">
-            <svg class="tool" viewBox="0 0 120 200">
-              <path class="steel-light" d="M8 6 h18 v168 h88 v18 h-106 z"/>
-              <line class="ticks" x1="17" y1="12" x2="17" y2="168"/>
-              <line class="ticks" x1="32" y1="183" x2="110" y2="183"/>
-            </svg>
-          </span>
-          <span class="hang hang-driver hang-driver-2">
-            <svg class="tool" viewBox="0 0 40 220">
-              <rect class="grip grip-blue" x="6" y="6" width="28" height="80" rx="12"/>
-              <rect class="steel-dark" x="13" y="86" width="14" height="10" rx="2"/>
-              <rect class="steel" x="17" y="96" width="6" height="88"/>
-              <path class="steel" d="M15 184 h10 l-5 12 z"/>
-            </svg>
-          </span>
-        </div>
-      </div>
-
       <div class="wrap hero-grid">
-        <div class="sign">
+        <div class="hero-copy">
           <h1 class="wordmark">TheHodges<wbr>Podges</h1>
           <p class="lede">Planners for the things you build and upgrade. Pick the hobby, pick what you own, and see what fits before you spend a dollar.</p>
           <p class="hero-note">The first planner, for RC crawlers, is being built now. RC boats, electric guitars and model railroads are next on the bench, with more hobbies after them.</p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#hobbies">Open the drawers</a>
+            <a class="btn btn-primary" href="#hobbies">Open the parts cabinet</a>
             <a class="btn btn-quiet" href="#apps">See the first app</a>
           </div>
         </div>
 
         <div class="cabinet-area" id="hobbies">
-          <div class="cabinet" role="group" aria-labelledby="cabinet-title" aria-describedby="cabinet-help">
-            <div class="cabinet-crown">
-              <h2 class="cabinet-title" id="cabinet-title">Hobbies</h2>
-              <p class="cabinet-help" id="cabinet-help">Each drawer holds a hobby. Pull one out to set its project on the bench.</p>
-            </div>
+          <h2 class="cabinet-title">Hobbies</h2>
+          <p class="cabinet-help" id="cabinet-help">Each drawer is a hobby. Pull one out to see what its planner will do.</p>
+          <div class="cabinet" role="group" aria-labelledby="cabinet-help">
+            <div class="cabinet-plate" aria-hidden="true">THP parts cabinet</div>
             <ul class="drawers" id="drawers">
               <!-- Drawers are filled in from js/catalog.js -->
             </ul>
-            <div class="cabinet-base" aria-hidden="true"></div>
           </div>
           <noscript>
             <p class="noscript">Turn on JavaScript to open the drawers. The first hobby is RC crawlers, whose planner is being built. Planned next: RC boats, electric guitars, model railroads, slot cars, sewing and embroidery machines, fishing rod building, amateur radio, RC airplanes, DIY audio and hobby robotics.</p>
@@ -127,8 +62,7 @@
       </div>
     </section>
 
-    <section class="bench" aria-label="Selected hobby">
-      <div class="bench-edge" aria-hidden="true"></div>
+    <section class="drawer-detail-band" aria-label="Selected hobby">
       <div class="wrap">
         <div class="drawer-detail" id="drawer-detail" aria-live="polite"></div>
       </div>
@@ -142,7 +76,6 @@
         </div>
 
         <article class="app-card" aria-labelledby="app-rc-title">
-          <div class="clip" aria-hidden="true"></div>
           <div class="app-card-head">
             <h3 id="app-rc-title">RC Crawler Build Lab</h3>
             <span class="tag tag-building">Being built</span>
@@ -164,33 +97,31 @@
             <li><span>Electric guitar customization</span><span class="tag tag-planned">Planned</span></li>
             <li><span>Model railroading and locomotive upgrades</span><span class="tag tag-planned">Planned</span></li>
           </ul>
-          <p class="next-up-more"><a href="#hobbies">See every hobby in the drawers</a></p>
+          <p class="next-up-more"><a href="#hobbies">See every hobby in the cabinet</a></p>
         </aside>
       </div>
     </section>
 
     <section class="about" id="about">
-      <div class="wrap">
-        <div class="shop-rules">
-          <h2>Why a hodgepodge</h2>
-          <div class="about-body">
-            <p>Most hobbies that involve building and upgrading have the same problem: thousands of parts, a handful of forums, and no easy way to know whether the part in your cart actually fits the thing on your bench.</p>
-            <p>TheHodgesPodges is a mixed bag on purpose. One workshop, many hobbies, and the same rules in every planner:</p>
-            <dl class="promises">
-              <div>
-                <dt>Start with what you own</dt>
-                <dd>Plans begin from your exact model, not a generic category.</dd>
-              </div>
-              <div>
-                <dt>Show the proof</dt>
-                <dd>A fit is marked as a fit only when a manufacturer document says so.</dd>
-              </div>
-              <div>
-                <dt>Say when we don't know</dt>
-                <dd>Anything unproven is labelled that way, so you can decide for yourself.</dd>
-              </div>
-            </dl>
-          </div>
+      <div class="wrap about-grid">
+        <h2>Why a hodgepodge</h2>
+        <div class="about-body">
+          <p>Most hobbies that involve building and upgrading have the same problem: thousands of parts, a handful of forums, and no easy way to know whether the part in your cart actually fits the thing on your bench.</p>
+          <p>TheHodgesPodges is a mixed bag on purpose. One workshop, many hobbies, and the same promise in every planner:</p>
+          <dl class="promises">
+            <div>
+              <dt>Start with what you own</dt>
+              <dd>Plans begin from your exact model, not a generic category.</dd>
+            </div>
+            <div>
+              <dt>Show the proof</dt>
+              <dd>A fit is marked as a fit only when a manufacturer document says so.</dd>
+            </div>
+            <div>
+              <dt>Say when we don't know</dt>
+              <dd>Anything unproven is labelled that way, so you can decide for yourself.</dd>
+            </div>
+          </dl>
         </div>
       </div>
     </section>
